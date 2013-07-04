@@ -103,7 +103,7 @@ final class Leslie {
       wiki.login(credentials.getUsername(), credentials.getPassword());
       final Integer next = (state + 1) % sourcePages.size();
       final String nextPageContent = wiki.getPageContent(sourcePages.get(next));
-      wiki.setPageContent(options.getTargetPage(), nextPageContent);
+      wiki.setPageContent(options.getTargetPage(), nextPageContent, options.getEditComment());
       state = next;
       this.writeState();
       LOGGER.info("Successfully wrote content of {} to {}.", sourcePages.get(state), options.getTargetPage());

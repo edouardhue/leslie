@@ -21,8 +21,8 @@ public final class MockWiki implements Wiki {
   }
 
   @Override
-  public void setPageContent(String page, String content) {
-    LOGGER.info("setPageContent: {}, {}", page, content);
+  public void setPageContent(String page, String content, String comment) {
+    LOGGER.info("setPageContent: {}, {}, {}", page, content, comment);
   }
 
   @Override

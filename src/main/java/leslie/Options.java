@@ -21,6 +21,9 @@ final class Options {
   @Option(name = "-w", required = true, usage = "MediaWiki API endpoint")
   private URL wiki;
   
+  @Option(name = "-e", required = false, usage = "Edit comment")
+  private String editComment = "Automatic content rotation";
+  
   public File getCredentials() {
     return credentials;
   }
@@ -39,5 +42,9 @@ final class Options {
   
   public URL getWiki() {
     return wiki;
+  }
+  
+  public String getEditComment() {
+    return editComment;
   }
 }

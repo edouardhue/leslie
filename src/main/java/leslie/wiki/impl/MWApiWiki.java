@@ -43,10 +43,10 @@ public final class MWApiWiki implements Wiki {
   }
 
   @Override
-  public void setPageContent(final String page, final String content) throws WikiException {
+  public void setPageContent(final String page, final String content, String comment) throws WikiException {
     try {
       final String editToken = api.getEditToken();
-      final ApiResult result = api.action("edit").param("title", page).param("text", content).param("summary", "Campagne accueil des nouveaux").param("token", editToken).post();
+      final ApiResult result = api.action("edit").param("title", page).param("text", content).param("summary", comment).param("token", editToken).post();
       final String editResult = result.getString("/api/edit/@result");
       if (!"Success".equals(editResult)) {
         final DOMImplementationRegistry reg = DOMImplementationRegistry.newInstance();
