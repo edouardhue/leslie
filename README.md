@@ -13,6 +13,7 @@ java leslie.Main
  -s FILE : State file
  -t VAL  : Target page
  -w URL  : MediaWiki API endpoint
+ -e VAL  : Edit comment
 ```
 
 Files
@@ -29,5 +30,6 @@ If the state file is missing, a warning is issued and the file is initialized wi
 Other parameters
 ----------------
 
-+ The **target page** parameter is the name of the page to be overwritten with the content of the so-called source pages, at each run.
-+ The **API endpoint** is described here : https://www.mediawiki.org/wiki/User_agent#The_endpoint
++ The **target page** parameter is the name of the page to be overwritten with the content of the so-called source pages, at each run ;
++ The **API endpoint** is described here : https://www.mediawiki.org/wiki/User_agent#The_endpoint ;
++ An optional edit comment.
