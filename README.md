@@ -27,6 +27,27 @@ Leslie uses three different files :
 
 If the state file is missing, a warning is issued and the file is initialized with the value **0**. The other two files must be present.
 
+Examples
+--------
+
+**Credentials**
+```
+username=Whoever
+password=Whatever
+```
+
+**Source pages**
+```
+Project:Whatever/Page/A
+Project:Whatever/Page/B
+Project:Whatever/Page/C
+```
+
+**State**
+```
+2
+```
+
 Other parameters
 ----------------
 
