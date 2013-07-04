@@ -106,6 +106,7 @@ final class Leslie {
       wiki.setPageContent(options.getTargetPage(), nextPageContent);
       state = next;
       this.writeState();
+      LOGGER.info("Successfully wrote content of {} to {}.", sourcePages.get(state), options.getTargetPage());
     } catch (final WikiException e) {
       throw new LeslieException(e);
     } catch (final IOException e) {

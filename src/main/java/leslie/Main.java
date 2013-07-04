@@ -1,6 +1,6 @@
 package leslie;
 
-import leslie.wiki.mock.MockWiki;
+import leslie.wiki.impl.MWApiWiki;
 
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
@@ -11,7 +11,7 @@ public final class Main {
     final CmdLineParser parser = new CmdLineParser(options);
     try {
       parser.parseArgument(args);
-      final Leslie leslie = new Leslie(options, new MockWiki());
+      final Leslie leslie = new Leslie(options, new MWApiWiki(options.getWiki().toExternalForm()));
       leslie.updateTargetPage();
     } catch (final CmdLineException e) {
       System.err.println(e.getMessage());
